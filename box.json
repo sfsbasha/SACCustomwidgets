@@ -1,0 +1,79 @@
+{ 
+   "id":"com.demo.gauge",
+   "version":"1.0.0",
+   "name":"Demo Gauge",
+   "description":"A Gauge Demo",
+   "newInstancePrefix":"Gauge",
+   "icon":"https://sfsbasha.github.io/saccustomwidgets/images.png",
+   "vendor":"Demo",
+   "eula":"EULA",
+   "license":"1.0",
+   "webcomponents":[ 
+      { 
+         "kind":"main",
+         "tag":"com-demo-gauge",
+         "url":"https://sfsbasha.github.io/saccustomwidgets/box.js",
+         "integrity":"",
+         "ignoreIntegrity":true
+      }
+
+   ],
+   "properties":{ 
+      "value":{ 
+         "type":"number",
+         "description":"Gauge value",
+         "default":"0"
+      },
+      "info":{ 
+         "type":"string",
+         "description":"Gauge Info",
+         "default":""
+      },
+      "color":{ 
+         "type":"string",
+         "description":"Text Colour Info",
+         "default":"#3498db"
+      },
+      "width":{ 
+         "type":"integer",
+         "default":100
+      },
+      "height":{ 
+         "type":"integer",
+         "default":100
+      }
+   },
+   "methods":{ 
+      "setValue":{ 
+         "description":"Sets the Gauge Value.",
+         "parameters":[ 
+            { 
+               "name":"newValue",
+               "type":"number",
+               "description":"Gauge Value"
+            },
+            { 
+               "name":"newInfo",
+               "type":"string",
+               "description":"Gauge Info"
+            },
+            { 
+               "name":"newColor",
+               "type":"string",
+               "description":"Text Color Info"
+            }
+         ],
+         "body":"this.value = newValue; this.info = newInfo; this.color = newColor;"
+      },
+      "getValue":{ 
+         "returnType":"number",
+         "description":"Returnsthe Gauge Value",
+         "body":"Return this value;"
+      }
+   },
+   "events":{ 
+      "onClick":{ 
+         "description":"Called when the user clicks the Box."
+      }
+   }
+}
