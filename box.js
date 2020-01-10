@@ -68,7 +68,7 @@
 			this.addEventListener("click", event => {
 				var event = new Event("onClick");
 				this.dispatchEvent(event);
-				var init = new Event("onInitialization");
+				var init = new Event("onload");
 				this.dispatchEvent(init);
 			});
 			
