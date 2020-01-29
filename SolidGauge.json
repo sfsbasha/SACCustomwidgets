@@ -1,0 +1,62 @@
+{
+	"id": "com.demo.solidGaugeNew",
+	"version": "1.0.1",
+	"name": "Demo Solid Gauge New",
+	"description": "A Solid Gauge demo",
+	"newInstancePrefix": "solidGaugeNew",
+	"icon": "https://shineshow.github.io/SAC/box/icon.png",
+	"vendor": "Demo",
+	"eula": "EULA",
+	"license": "1.0",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-demo-gauge-chart",
+			"url": "https://sfsbasha.github.io/saccustomwidgets/SolidGauge1.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+	],
+	"properties": {
+		"value": {
+			"type": "string",
+			"description": "Gauge value",
+			"default": ""
+		},
+		"width": {
+			"type": "integer",
+			"default": 100
+		},
+		"height": {
+			"type": "integer",
+			"default": 100
+		}
+	},
+	"methods": {
+		"setValue": {
+			"description": "Sets the Gauge value.",
+			"parameters": [
+				{
+					"name": "newValue",
+					"type": "string",
+					"description": "Gauge value"
+				}
+			],
+			"body": "this.value = newValue;"
+		},
+		"getValue": {
+			"returnType": "string",
+			"description": "Returns the Gauge value.",
+			"body": "return this.value;"
+		}
+	},
+	"events": {
+                "onload":{
+                        "description": "Initilize default values."
+
+                          } ,
+		"onClick": {
+			"description": "Called when the user clicks the Box."
+		           }
+	}
+}
